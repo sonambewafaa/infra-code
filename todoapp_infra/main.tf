@@ -65,6 +65,15 @@ module "birju_subnet" {
   subnet_name          = "birju-subnet"
   address_prefixes     = ["10.0.60.0/24"]
 }
+module "tirju_subnet" {
+  depends_on = [module.virtual_network]
+  source     = "../modules/azurerm_subnet"
+
+  resource_group_name  = "rg-tirju"
+  virtual_network_name = "vnet-ttirju"
+  subnet_name          = "tirju-subnet"
+  address_prefixes     = ["10.0.7.0/24"]
+}
 
 module "backend_subnet" {
   depends_on = [module.virtual_network]
