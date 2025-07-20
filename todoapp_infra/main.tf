@@ -20,26 +20,6 @@ module "virtual_network" {
   depends_on = [module.resource_group]
   source     = "../modules/azurerm_virtual_network"
 
-  virtual_network_name     = "vnet-todoapp"
-  virtual_network_location = "centralindia"
-  resource_group_name      = "rg-todoapp"
-  address_space            = ["10.0.0.0/16"]
-}
-
-module "virtual_network" {
-  depends_on = [module.resource_group]
-  source     = "../modules/azurerm_virtual_network"
-
-  virtual_network_name     = "vnet-tondu"
-  virtual_network_location = "centralindia"
-  resource_group_name      = "rg-todoapp"
-  address_space            = ["10.0.0.0/16"]
-}
-
-  module "virtual_network" {
-  depends_on = [module.resource_group]
-  source     = "../modules/azurerm_virtual_network"
-
   virtual_network_name     = "vnet-dhondhu"
   virtual_network_location = "centralindia"
   resource_group_name      = "rg-todoapp"
